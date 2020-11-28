@@ -52,7 +52,7 @@ export interface EstimateFacesConfig {
 const PREDICTION_VALUES = 'MediaPipePredictionValues';
 type PredictionValuesKind = typeof PREDICTION_VALUES;
 
-interface AnnotatedPredictionValues {
+export interface AnnotatedPredictionValues {
   kind: PredictionValuesKind;
   /** Probability of the face detection. */
   faceInViewConfidence: number;
@@ -73,7 +73,7 @@ interface AnnotatedPredictionValues {
 const PREDICTION_TENSORS = 'MediaPipePredictionTensors';
 type PredictionTensorsKind = typeof PREDICTION_TENSORS;
 
-interface AnnotatedPredictionTensors {
+export interface AnnotatedPredictionTensors {
   kind: PredictionTensorsKind;
   faceInViewConfidence: number;
   boundingBox: {topLeft: tf.Tensor1D, bottomRight: tf.Tensor1D};
